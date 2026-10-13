@@ -13,7 +13,6 @@ AmsiProvider/
 └── README.md
 ```
 
-
 ---
 
 ## Cài đặt
@@ -23,7 +22,11 @@ AmsiProvider/
 regsvr32 AmsiProvider.dll
 regsvr32 /u AmsiProvider.dll
 ```
-
+## Sử dụng
+```1. Sau khi đăng ký thành công, tắt real-time của AV trên máy bạn đẻ tránh AV chặn và xóa mất mẫu 
+2. Tắt xong thì có thể chạy mẫu và log trace được lưu vào folder C:/AMSI_Dumps
+3. Lưu ý: không phải tất cả các log được dump ra đều là payload của mẫu, sẽ có một số là benign script   
+```
 ---
 
 ## Registry Keys được tạo
@@ -39,24 +42,6 @@ HKLM\SOFTWARE\Classes\CLSID\{2E5D8A62-77F9-4F7B-A90C-2744820139B2}\InProcServer3
 
 # AMSI Enrollment
 HKLM\SOFTWARE\Microsoft\AMSI\Providers\{2E5D8A62-77F9-4F7B-A90C-2744820139B2}
-```
-
----
-
-## Log File Format
-
-Log được ghi tại `C:\AmsiProvider\amsi_log.txt`:
-
-```
-[2025-06-15 10:23:45]
-  App     : PowerShell_C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-  Content : <ScriptBlock>
-  Session : 1234567890
-  Size    : 512 bytes
-  Data    :
-  >>>
-  Get-Process | Where-Object { $_.CPU -gt 10 }
-  <<<
 ```
 
 ---
