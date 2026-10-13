@@ -1,0 +1,11 @@
+; AmsiProvider.def
+; Export list cho COM in-proc server DLL
+; Bắt buộc phải export đủ 4 hàm này để regsvr32 hoạt động
+
+LIBRARY "AmsiProvider"
+
+EXPORTS
+    DllCanUnloadNow     PRIVATE
+    DllGetClassObject   PRIVATE
+    DllRegisterServer   PRIVATE
+    DllUnregisterServer PRIVATE

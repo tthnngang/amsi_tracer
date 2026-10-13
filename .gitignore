@@ -1,0 +1,14 @@
+x64/
+Debug/
+Release/
+*.pdb
+*.lib
+*.exp
+*.obj
+*.ilk
+*.vcxproj.user
+*.suo
+.vs/
+.env
+*.key
+*.token
