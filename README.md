@@ -23,7 +23,8 @@ regsvr32 AmsiProvider.dll
 regsvr32 /u AmsiProvider.dll
 ```
 ## Sử dụng
-```1. Sau khi đăng ký thành công, tắt real-time của AV trên máy bạn đẻ tránh AV chặn và xóa mất mẫu 
+```
+1. Sau khi đăng ký thành công, tắt real-time của AV trên máy bạn đẻ tránh AV chặn và xóa mất mẫu 
 2. Tắt xong thì có thể chạy mẫu và log trace được lưu vào folder C:/AMSI_Dumps
 3. Lưu ý: không phải tất cả các log được dump ra đều là payload của mẫu, sẽ có một số là benign script   
 ```
